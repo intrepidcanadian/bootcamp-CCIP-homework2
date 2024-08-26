@@ -117,6 +117,10 @@ export const getRouterConfig = (network: string) => {
             return routerConfig.gnosisChiado;
         case "celoAlfajores":
             return routerConfig.celoAlfajores;
+        case "hardhat":
+            return {
+                    address: "0x0000000000000000000000000000000000000000" // Dummy router address for local testing
+                };
         default:
             throw new Error("Unknown network: " + network);
     }

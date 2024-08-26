@@ -7,6 +7,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import './tasks';
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
 const ETHEREUM_SEPOLIA_RPC_URL = process.env.ETHEREUM_SEPOLIA_RPC_URL;
 const OPTIMISM_SEPOLIA_RPC_URL = process.env.OPTIMISM_SEPOLIA_RPC_URL;
 const ARBITRUM_SEPOLIA_RPC_URL = process.env.ARBITRUM_SEPOLIA_RPC_URL;
@@ -36,7 +37,7 @@ extendEnvironment(async (hre) => {
 
 const config: HardhatUserConfig = {
   solidity: "0.8.19",
-  defaultNetwork: 'ethereumSepolia', // Source Chain
+  defaultNetwork: 'hardhat', // Source Chain
   networks: {
     hardhat: {
       chainId: 31337
@@ -54,7 +55,7 @@ const config: HardhatUserConfig = {
     optimismSepolia: {
       url: OPTIMISM_SEPOLIA_RPC_URL !== undefined ? OPTIMISM_SEPOLIA_RPC_URL : '',
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-      chainId: 11155420,
+      chainId: 11155420
     },
     arbitrumSepolia: {
       url: ARBITRUM_SEPOLIA_RPC_URL !== undefined ? ARBITRUM_SEPOLIA_RPC_URL : '',

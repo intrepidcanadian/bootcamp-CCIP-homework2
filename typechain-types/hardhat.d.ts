@@ -13,6 +13,10 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
+      name: "AggregateRateLimiter",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.AggregateRateLimiter__factory>;
+    getContractFactory(
       name: "CCIPReceiver",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.CCIPReceiver__factory>;
@@ -21,13 +25,41 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IAny2EVMMessageReceiver__factory>;
     getContractFactory(
+      name: "IPriceRegistry",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IPriceRegistry__factory>;
+    getContractFactory(
+      name: "IRouter",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IRouter__factory>;
+    getContractFactory(
       name: "IRouterClient",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IRouterClient__factory>;
     getContractFactory(
+      name: "IPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IPool__factory>;
+    getContractFactory(
       name: "Client",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Client__factory>;
+    getContractFactory(
+      name: "Internal",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Internal__factory>;
+    getContractFactory(
+      name: "MerkleMultiProof",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MerkleMultiProof__factory>;
+    getContractFactory(
+      name: "RateLimiter",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.RateLimiter__factory>;
+    getContractFactory(
+      name: "MockCCIPRouter",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MockCCIPRouter__factory>;
     getContractFactory(
       name: "ConfirmedOwner",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -41,13 +73,89 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.OwnerIsCreator__factory>;
     getContractFactory(
+      name: "CallWithExactGas",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.CallWithExactGas__factory>;
+    getContractFactory(
+      name: "IERC677Receiver",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC677Receiver__factory>;
+    getContractFactory(
       name: "IOwnable",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IOwnable__factory>;
     getContractFactory(
+      name: "IBurnMintERC20",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IBurnMintERC20__factory>;
+    getContractFactory(
+      name: "BurnMintERC677",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BurnMintERC677__factory>;
+    getContractFactory(
+      name: "ERC677",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ERC677__factory>;
+    getContractFactory(
+      name: "IERC677",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC677__factory>;
+    getContractFactory(
+      name: "ERC20",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ERC20__factory>;
+    getContractFactory(
+      name: "IERC20Permit",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC20Permit__factory>;
+    getContractFactory(
+      name: "ERC20Burnable",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ERC20Burnable__factory>;
+    getContractFactory(
+      name: "IERC20Metadata",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC20Metadata__factory>;
+    getContractFactory(
+      name: "IERC20",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC20__factory>;
+    getContractFactory(
       name: "IERC165",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC165__factory>;
+    getContractFactory(
+      name: "BurnMintERC677Helper",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BurnMintERC677Helper__factory>;
+    getContractFactory(
+      name: "CCIPLocalSimulator",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.CCIPLocalSimulator__factory>;
+    getContractFactory(
+      name: "LinkToken",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.LinkToken__factory>;
+    getContractFactory(
+      name: "WETH9",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.WETH9__factory>;
+    getContractFactory(
+      name: "BurnMintERC677Helper",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.BurnMintERC677Helper__factory>;
+    getContractFactory(
+      name: "CCIPLocalSimulator",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.CCIPLocalSimulator__factory>;
+    getContractFactory(
+      name: "MockEvm2EvmOffRamp",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MockEvm2EvmOffRamp__factory>;
+    getContractFactory(
+      name: "Register",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Register__factory>;
     getContractFactory(
       name: "CrossChainNameServiceLookup",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -61,10 +169,47 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.CrossChainNameServiceRegister__factory>;
     getContractFactory(
+      name: "AggregatorInterface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.AggregatorInterface__factory>;
+    getContractFactory(
+      name: "AggregatorV2V3Interface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.AggregatorV2V3Interface__factory>;
+    getContractFactory(
+      name: "AggregatorV3Interface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.AggregatorV3Interface__factory>;
+    getContractFactory(
+      name: "MockOffchainAggregator",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MockOffchainAggregator__factory>;
+    getContractFactory(
+      name: "MockV3Aggregator",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MockV3Aggregator__factory>;
+    getContractFactory(
       name: "ICrossChainNameServiceLookup",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ICrossChainNameServiceLookup__factory>;
+    getContractFactory(
+      name: "MockRouter",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MockRouter__factory>;
+    getContractFactory(
+      name: "LinkToken",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.LinkToken__factory>;
+    getContractFactory(
+      name: "WETH9",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.WETH9__factory>;
 
+    getContractAt(
+      name: "AggregateRateLimiter",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.AggregateRateLimiter>;
     getContractAt(
       name: "CCIPReceiver",
       address: string,
@@ -76,15 +221,50 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IAny2EVMMessageReceiver>;
     getContractAt(
+      name: "IPriceRegistry",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IPriceRegistry>;
+    getContractAt(
+      name: "IRouter",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IRouter>;
+    getContractAt(
       name: "IRouterClient",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.IRouterClient>;
     getContractAt(
+      name: "IPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IPool>;
+    getContractAt(
       name: "Client",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.Client>;
+    getContractAt(
+      name: "Internal",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Internal>;
+    getContractAt(
+      name: "MerkleMultiProof",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MerkleMultiProof>;
+    getContractAt(
+      name: "RateLimiter",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.RateLimiter>;
+    getContractAt(
+      name: "MockCCIPRouter",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MockCCIPRouter>;
     getContractAt(
       name: "ConfirmedOwner",
       address: string,
@@ -101,15 +281,110 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.OwnerIsCreator>;
     getContractAt(
+      name: "CallWithExactGas",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.CallWithExactGas>;
+    getContractAt(
+      name: "IERC677Receiver",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC677Receiver>;
+    getContractAt(
       name: "IOwnable",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.IOwnable>;
     getContractAt(
+      name: "IBurnMintERC20",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IBurnMintERC20>;
+    getContractAt(
+      name: "BurnMintERC677",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BurnMintERC677>;
+    getContractAt(
+      name: "ERC677",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ERC677>;
+    getContractAt(
+      name: "IERC677",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC677>;
+    getContractAt(
+      name: "ERC20",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ERC20>;
+    getContractAt(
+      name: "IERC20Permit",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC20Permit>;
+    getContractAt(
+      name: "ERC20Burnable",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ERC20Burnable>;
+    getContractAt(
+      name: "IERC20Metadata",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC20Metadata>;
+    getContractAt(
+      name: "IERC20",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC20>;
+    getContractAt(
       name: "IERC165",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.IERC165>;
+    getContractAt(
+      name: "BurnMintERC677Helper",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BurnMintERC677Helper>;
+    getContractAt(
+      name: "CCIPLocalSimulator",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.CCIPLocalSimulator>;
+    getContractAt(
+      name: "LinkToken",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.LinkToken>;
+    getContractAt(
+      name: "WETH9",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.WETH9>;
+    getContractAt(
+      name: "BurnMintERC677Helper",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.BurnMintERC677Helper>;
+    getContractAt(
+      name: "CCIPLocalSimulator",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.CCIPLocalSimulator>;
+    getContractAt(
+      name: "MockEvm2EvmOffRamp",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MockEvm2EvmOffRamp>;
+    getContractAt(
+      name: "Register",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Register>;
     getContractAt(
       name: "CrossChainNameServiceLookup",
       address: string,
@@ -126,10 +401,50 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.CrossChainNameServiceRegister>;
     getContractAt(
+      name: "AggregatorInterface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.AggregatorInterface>;
+    getContractAt(
+      name: "AggregatorV2V3Interface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.AggregatorV2V3Interface>;
+    getContractAt(
+      name: "AggregatorV3Interface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.AggregatorV3Interface>;
+    getContractAt(
+      name: "MockOffchainAggregator",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MockOffchainAggregator>;
+    getContractAt(
+      name: "MockV3Aggregator",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MockV3Aggregator>;
+    getContractAt(
       name: "ICrossChainNameServiceLookup",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ICrossChainNameServiceLookup>;
+    getContractAt(
+      name: "MockRouter",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MockRouter>;
+    getContractAt(
+      name: "LinkToken",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.LinkToken>;
+    getContractAt(
+      name: "WETH9",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.WETH9>;
 
     // default types
     getContractFactory(
